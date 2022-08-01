@@ -1,0 +1,4 @@
+^XA
+^FO100,50^ADN,36,20^FDPrueba zebra RAW^FS
+^XZ
+
