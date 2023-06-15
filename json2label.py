@@ -1,10 +1,10 @@
 import json
 
-def print_zpl_content(file_path, data_file):
-    with open(file_path, 'r') as file:
+def print_zpl_content(modelo_zpl_path, data_json_path):
+    with open(modelo_zpl_path, 'r') as file:
         zpl_content = file.read()
 
-    with open(data_file, 'r') as data_file:
+    with open(data_json_path, 'r') as data_file:
         data = json.load(data_file)
 
     for marca in data:
@@ -15,6 +15,6 @@ def print_zpl_content(file_path, data_file):
 
 if __name__ == "__main__":
     # Ejemplo de uso
-    modelo_path = 'modelo.zpl'
-    data_path = 'data.json'
-    print_zpl_content(modelo_path, data_path)
+    modelo_zpl_path = 'modelo.zpl'
+    data_json_path = 'tabla.json'
+    print_zpl_content(modelo_zpl_path, data_json_path)
