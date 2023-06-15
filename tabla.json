@@ -1,0 +1,31 @@
+{
+    "tabla": {
+      "filas": [
+        {
+          "id": 1,
+          "nombre": "Fila 1",
+          "columnas": {
+            "columna1": "Valor 1.1",
+            "columna2": "Valor 1.2"
+          }
+        },
+        {
+          "id": 2,
+          "nombre": "Fila 2",
+          "columnas": {
+            "columna1": "Valor 2.1",
+            "columna2": "Valor 2.2"
+          }
+        },
+        {
+          "id": 3,
+          "nombre": "Fila 3",
+          "columnas": {
+            "columna1": "Valor 3.1",
+            "columna2": "Valor 3.2"
+          }
+        }
+      ]
+    }
+  }
+  
