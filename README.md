@@ -14,7 +14,8 @@ lp -d zebra-raw <<< cat temp_label.zpl
 ```
 sudo apt install xclip 
 ```
-
+## ChatGPT
+[ChatGPT](https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514)
 
 ## Notas
 [Versión Google Docs](https://docs.google.com/document/d/1KEMTndB9a6GAG9w_y4i5BaqnAcqN8ZQys83Q_9N4GOU/edit?usp=sharing)
