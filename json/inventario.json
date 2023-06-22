@@ -1,0 +1,50 @@
+[
+    {
+        "_MBA": "RAY1",
+        "_KMP": "A",
+        "__fis": "Residuo",
+        "__quimi": "UO2",
+        "_idlote": "Camp NC",
+        "_citems": "1",
+        "_elem": "38",
+        "_u": "g",
+        "_isot": "G",
+        "_pbruto": "",
+        "_ptara": "",
+        "_pneto": "",
+        "_uranio": "",
+        "_enriq": "",
+        "_pisot": "89",
+        "_codmat": "1",
+        "_med": "20",
+        "_obs": "TQOE",
+        "null": [
+            "M",
+            "KMP A"
+        ]
+    },
+    {
+        "_MBA": "RAY1",
+        "_KMP": "A",
+        "__fis": "Residuo",
+        "__quimi": "UO2",
+        "_idlote": "Cort",
+        "_citems": "1",
+        "_elem": "4",
+        "_u": "g",
+        "_isot": "G",
+        "_pbruto": "",
+        "_ptara": "",
+        "_pneto": "",
+        "_uranio": "",
+        "_enriq": "",
+        "_pisot": "60",
+        "_codmat": "0",
+        "_med": "10",
+        "_obs": "RRGD",
+        "null": [
+            "M",
+            "KMP A"
+        ]
+    }
+]
