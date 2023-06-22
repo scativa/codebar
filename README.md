@@ -4,6 +4,7 @@ Genera e imprime por linea de comandos etiquetas para las impresoras térmicas _
 Queda por desarrollar los códigos que a partir de una o más lineas de planillas de cálculo del clipboard generen las etiquetas y estas sean impresas por lineas de comando. Esto se había logrado en la versión anterior `CodeGenVersion`
 
 ## Files
+- `mod_zpl_template.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.csv` o del paste en memoria con los datos. Es una librería para ser usada en desarrollos variados.
 - `json2label.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.json` con los datos.
 - `./csv`: Carpeta con código ejemplo de formato _csv_
 - `./json`: Carpeta con código ejemplo de manejo de archivos y formato _json_

@@ -1,11 +1,13 @@
-
 import json
 import csv
+# https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514
+# Partiendo de un archivo CSV (el delimitador se pasa como parámetro) se lo lee como una estructura de diccionario
+# Este lo convierte a archivo json
 
-def csv_to_json(csv_file, json_file):
+def csv_to_json(csv_file, json_file, delimiter=','):
     # Abrir el archivo CSV y leer los datos
     # with open(csv_file, 'r') as file:
-    reader = csv.DictReader(csv_file)
+    reader = csv.DictReader(csv_file, delimiter=delimiter)
     data = [row for row in reader]
 
     # Escribir los datos en el archivo JSON
