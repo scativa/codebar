@@ -13,7 +13,18 @@ Queda por desarrollar los códigos que a partir de una o más lineas de planilla
 ## Old
 Versión anterior que utiliza código python para generar un archivo zpl con la información a imprimir. Quedó en el branch `CodeGenVersion`
 
+
+
 ## Usage
+```
+conda activate zebra
+python ./zpl_gen.py ./zpl/inventario_230623_v1.zpl -o ./out/
+```
+
+```
+lp -d zebra-raw <<< cat label.zpl
+```
+
 ```
 conda activate zebra
 python pastetable.py > temp_table.txt

@@ -2,6 +2,7 @@ import json
 import csv
 import io
 import pyperclip
+import copy
 
 # https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514
 # Genera por salida de pantalla las etiquetas siguiendo un formato (inventario.zpl), donde las marcas están como key en un diccionario
@@ -44,6 +45,24 @@ def print_zpl_content(modelo_zpl_path, data_list):
         for line in zpl_template.splitlines():
             print(line.strip())
 
+def generate_zpl_content(modelo_zpl_path, data_list):
+    etiquetas = []
+    for i, etiqueta in enumerate(data_list):
+
+        with open(modelo_zpl_path, 'r') as file:
+            zpl_template = file.read()
+
+        # print(f'^FX --- Etiqueta {i} ---')
+        for marca in etiqueta:
+            if not marca is None:
+                zpl_template = zpl_template.replace(marca, str(etiqueta[marca]))
+
+        etiquetas.append((i, etiqueta, zpl_template))
+        # for line in zpl_template.splitlines():
+        #     print(line.strip())
+    
+    return etiquetas
+
 if __name__ == "__main__":
     # Ejemplo de uso
     csv_file_name = './csv/inventario.csv'  # Ruta del archivo CSV
@@ -67,9 +86,14 @@ if __name__ == "__main__":
     csv_file = io.StringIO(paste)
     data_paste = csv_to_dict(csv_file, delimiter='\t')
 
-    print("data_json")
-    print_zpl_content(zpl_file_name, data_json)
-    print("data_dict")
-    print_zpl_content(zpl_file_name, data_dict)
-    print("data_paste")
-    print_zpl_content(zpl_file_name, data_paste)
+    etiquetas = generate_zpl_content(zpl_file_name, data_dict)
+
+    for etiqueta in etiquetas:
+        print(etiqueta[0],etiqueta[2].splitlines())
+
+    # print("data_json")
+    # print_zpl_content(zpl_file_name, data_json)
+    # print("data_dict")
+    # print_zpl_content(zpl_file_name, data_dict)
+    # print("data_paste")
+    # print_zpl_content(zpl_file_name, data_paste)
