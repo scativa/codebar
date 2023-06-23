@@ -14,6 +14,12 @@ Queda por desarrollar los códigos que a partir de una o más lineas de planilla
 Versión anterior que utiliza código python para generar un archivo zpl con la información a imprimir. Quedó en el branch `CodeGenVersion`
 
 
+```
+conda create -n  zebra python=3.10.4
+conda activate zebra
+python -m pip install -r requirements.txt 
+```
+
 
 ## Usage
 ```
