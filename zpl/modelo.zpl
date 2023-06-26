@@ -1,5 +1,0 @@
-^XA
-^FO100,50^ADN,36,20^FDMaterial: __MATERIAL__^FS
-^FO150,50^ADN,36,20^FDPeso Total: __PESO_TOTAL__^FS
-^XZ
-
