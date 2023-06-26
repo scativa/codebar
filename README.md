@@ -10,27 +10,44 @@ Queda por desarrollar los códigos que a partir de una o más lineas de planilla
 - `./json`: Carpeta con código ejemplo de manejo de archivos y formato _json_
 - `./zpl`: Carpeta con archivos y código ejemplo de manejo de formato _zpl_
 
-## Old
-Versión anterior que utiliza código python para generar un archivo zpl con la información a imprimir. Quedó en el branch `CodeGenVersion`
-
-
+## Configuración
 ```
 conda create -n  zebra python=3.10.4
 conda activate zebra
 python -m pip install -r requirements.txt 
 ```
-
+```
+sudo apt install xclip 
+```
 
 ## Usage
+### Generación de etiquetas
+Primero se activa el entorno _zebra_
 ```
 conda activate zebra
-python ./zpl_gen.py ./zpl/inventario_230623_v1.zpl -o ./out/
 ```
+Comando para generar a partir de el porta papeles
+```
+python ./zpl_gen.py ./zpl/modelo.zpl -o ./out/
+```
+Comando para generar a partir de un _csv_
+```
+python ./zpl_gen.py ./zpl/modelo.zpl -o ./out/ --csv inventario.csv
+```
+### impresión de etiquetas
+Imprime en el dispositivo __zebra-raw__ en ubuntu. [ChatGPT](https://chat.openai.com/c/4736aef4-f2ee-4197-9721-cee293930aa6)
 
+Para una etiqueta específica
 ```
 lp -d zebra-raw <<< cat label.zpl
 ```
+Para todas las etiquetas de la carpeta
+```
+for file in *.zpl; do lp -d zebra-raw <<< "$(cat "$file")"; done
+```
 
+Versión anterior que utiliza código python para generar un archivo zpl con la información a imprimir. Quedó en el branch `CodeGenVersion`. Está en la carpeta `cmdshell`
+__Obsoleto__
 ```
 conda activate zebra
 python pastetable.py > temp_table.txt
@@ -38,16 +55,10 @@ python table2label.py > temp_label.zpl
 lp -d zebra-raw <<< cat temp_label.zpl
 ```
 
-# Paste
-
-## Linux
-```
-sudo apt install xclip 
-```
-
-## Documentación complementaria
 ### ChatGPT
-[ChatGPT](https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514)
+[Zebra Print](https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514)
+[Print .zpl files batch](https://chat.openai.com/c/4736aef4-f2ee-4197-9721-cee293930aa6)
+
 ### Documentación Adicional
 [Versión Google Docs](https://docs.google.com/document/d/1KEMTndB9a6GAG9w_y4i5BaqnAcqN8ZQys83Q_9N4GOU/edit?usp=sharing)
 ### Zebra
@@ -56,6 +67,7 @@ sudo apt install xclip
 ## Utilidades
 ### Labelary
 [Muestra la etiqueta a partir del código ZPL](http://labelary.com/viewer.html)
+
 ### Node js
 [ZPL Packages](ttps://npm.io/search/keyword:ZPL)
 [Use the SendFileToPrinter API for Your Cloud-Based Printing Needs - Zebra Developer Portal](https://npm.io/search/keyword:ZPL)
