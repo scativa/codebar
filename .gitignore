@@ -1,8 +1,12 @@
+# Propias de programa
+out/
+inventario/out/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-out/
+.vscode
 
 # C extensions
 *.so
