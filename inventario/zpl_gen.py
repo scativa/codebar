@@ -11,6 +11,7 @@ def save_zpl(etiqueta, out_dir):
         lineas = etiqueta[2].splitlines()
         for linea in lineas:
             archivo.write(linea + '\n')    
+        print(f'{fn}.zpl')
 
 parser = argparse.ArgumentParser()
 # parser.add_argument('files', nargs='*', help='nombres de archivo (opcionales)')
@@ -26,7 +27,9 @@ csv_file_name = args.csv
 # clipboard = args.clipboard
 
 # file_names = args.files
-print(f'{zpl_file_name}, {out_dir}, {csv_file_name}')
+print(f'Modelo zpl: {zpl_file_name}')
+print(f'Modelo carpeta de salida: {out_dir}')
+print(f'Datos de entrada: {"Clipboard" if csv_file_name is None else csv_file_name}')
 
 
 # Ejemplo de uso
@@ -50,6 +53,6 @@ else:
 # data_paste = mzpl.csv_to_dict(csv_file, delimiter='\t')
 
 etiquetas = mzpl.generate_zpl_content(zpl_file_name, data_dict)
-
+print(f'Etiquetas encontradas: {len(etiquetas)}')
 for etiqueta in etiquetas:
     save_zpl(etiqueta,out_dir)
