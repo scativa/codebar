@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Imprimir etiquetas{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4" style="color: #ffc107;">Impresión de etiquetas</h2>
+
+      <form action="/imprimir" method="post">
+        <div class="mb-3">
+          <label for="tipo" class="form-label">Modo de impresión</label>
+          <select name="tipo" id="tipo" class="form-select" onchange="toggleCampos()" required>
+            <option value="" selected disabled>-- Seleccionar modo --</option>
+            <option value="archivo">Archivo específico</option>
+            <option value="carpeta">Carpeta completa</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="printer" class="form-label">Seleccionar impresora</label>
+          <select name="printer" id="printer" class="form-select" required>
+            <option value="" selected disabled>-- Seleccionar impresora --</option>
+            {% for p in impresoras %}
+              <option value="{{ p }}">{{ p }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="mb-3" id="campoArchivo" style="display: none;">
+          <label for="archivo" class="form-label">Nombre del archivo (.zpl)</label>
+          <input type="text" name="archivo" id="archivo" class="form-control">
+        </div>
+
+        <div class="mb-3" id="campoCarpeta" style="display: none;">
+          <label for="carpeta" class="form-label">Nombre de la carpeta</label>
+          <input type="text" name="carpeta" id="carpeta" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-100">Imprimir</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleCampos() {
+    const tipo = document.getElementById('tipo').value;
+    document.getElementById('campoArchivo').style.display = tipo === 'archivo' ? 'block' : 'none';
+    document.getElementById('campoCarpeta').style.display = tipo === 'carpeta' ? 'block' : 'none';
+  }
+</script>
+{% endblock %}

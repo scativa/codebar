@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, flash
 import os, sys
 import subprocess
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates_salv")
 app.secret_key = 'clave_secreta'
 
 # Carpeta base donde se guardan las etiquetas

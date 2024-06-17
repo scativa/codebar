@@ -11,7 +11,7 @@ if platform.system() == "Windows":
     import win32print
     import win32api
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates_mat")
 app.secret_key = "clave_secreta"
 
 # -------------------------------
