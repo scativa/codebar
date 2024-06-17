@@ -1,0 +1,59 @@
+^XA
+^PW812
+^LL480
+
+; Marco exterior
+^FO0,0^GB812,480,3^FS
+
+; Líneas internas
+^FO0,96^GB812,0,3^FS
+^FO0,192^GB812,0,3^FS
+^FO0,288^GB812,0,3^FS
+^FO0,384^GB812,0,3^FS
+
+; ==========================
+; FILA 1 - TITULO (negrita simulada)
+; ==========================
+^FO30,32^A0N,32,32^FDPPCA^FS
+^FO31,32^A0N,32,32^FDPPCA^FS
+
+; ==========================
+; FILA 2 - IDENTIFICACION
+; ==========================
+^FO30,120^A0N,32,32^FDIDENTIFICACION:^FS
+^FO31,120^A0N,32,32^FDIDENTIFICACION:^FS
+
+^FO300,120^A0N,32,32^FD{ID}^FS
+
+; ==========================
+; FILA 3 - MATERIAL
+; ==========================
+^FO30,216^A0N,32,32^FDMATERIAL:^FS
+^FO31,216^A0N,32,32^FDMATERIAL:^FS
+
+^FO300,216^A0N,32,32^FD{MAT}^FS
+
+; ==========================
+; FILA 4 - ESTADO + FECHA
+; ==========================
+^FO30,312^A0N,32,32^FDESTADO:^FS
+^FO31,312^A0N,32,32^FDESTADO:^FS
+
+^FO300,312^A0N,32,32^FD{ESTADO}^FS
+
+^FO500,312^A0N,32,32^FDFECHA:^FS
+^FO501,312^A0N,32,32^FDFECHA:^FS
+
+; >>> FECHA VALOR — CORREGIDO <<<
+^FO620,312^A0N,32,32^FD{FECHA}^FS
+
+; ==========================
+; FILA 5 - RESPONSABLE
+; ==========================
+^FO30,408^A0N,32,32^FDRESPONSABLE:^FS
+^FO31,408^A0N,32,32^FDRESPONSABLE:^FS
+
+^FO300,408^A0N,32,32^FD{RESP}^FS
+
+^XZ
+

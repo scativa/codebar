@@ -1,0 +1,24 @@
+{
+  "Campos": {
+    "RESP": [
+      "SANCHEZ",
+      "BIANCHI",
+      "CATIVA TOLOSA",
+      "STRIEBECK",
+      "PABLOVICH"
+    ],
+    "ESTADO": [
+      "APROBADO",
+      "OBSERVADO",
+      "LIBERADO"
+    ],
+    "MAT": [
+      "(POLVO) UO2 NAT",
+      "(PASTILLA) UO2 NAT",
+      "(POLVO) UO2 ENR",
+      "(PASTILLA) UO2 ENR",
+      "(POLVO) UO2 NAT + Gd2O3",
+      "(PASTILLA) UO2 NAT + Gd2O3"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+# Perfil
+source ~/miniconda3/etc/profile.d/conda.sh
+
+conda activate zebra
+
+python ./etiquetas_material_app.py 8081
+
+read -n 1 -s -r -p "Finalizado. Presione cualquier tecla para continuar..."
+echo " "
+

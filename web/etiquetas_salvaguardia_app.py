@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, flash
-import os
+import os, sys
 import subprocess
 
 app = Flask(__name__)
@@ -117,5 +117,11 @@ def subir():
 
 # Iniciar servidor
 if __name__ == '__main__':
-    os.makedirs(BASE_ETIQUETAS_DIR, exist_ok=True)
-    app.run(debug=True, port=8080, host='0.0.0.0')
+    if len(sys.argv) < 2:
+        print(f"Uso: python {sys.argv[0]} <puerto>")
+        exit(1)
+    else:
+        port = sys.argv[1]
+        print(f"Escuchando en puerto {port}")
+        os.makedirs(BASE_ETIQUETAS_DIR, exist_ok=True)
+        app.run(debug=True, port=port, host='0.0.0.0')

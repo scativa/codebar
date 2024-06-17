@@ -1,54 +1,91 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Etiquetas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
 
-{% block title %}Imprimir etiquetas{% endblock %}
+<body class="bg-dark text-light">
+<div class="container mt-4">
 
-{% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-6">
-    <div class="card shadow-lg p-4">
-      <h2 class="text-center mb-4" style="color: #ffc107;">Impresión de etiquetas</h2>
+    <h2 class="mb-4">Generador de Etiquetas</h2>
 
-      <form action="/imprimir" method="post">
-        <div class="mb-3">
-          <label for="tipo" class="form-label">Modo de impresión</label>
-          <select name="tipo" id="tipo" class="form-select" onchange="toggleCampos()" required>
-            <option value="" selected disabled>-- Seleccionar modo --</option>
-            <option value="archivo">Archivo específico</option>
-            <option value="carpeta">Carpeta completa</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="printer" class="form-label">Seleccionar impresora</label>
-          <select name="printer" id="printer" class="form-select" required>
-            <option value="" selected disabled>-- Seleccionar impresora --</option>
-            {% for p in impresoras %}
-              <option value="{{ p }}">{{ p }}</option>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <div class="alert alert-info">{{ msg }}</div>
             {% endfor %}
-          </select>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <label>ID</label>
+                <input name="id" class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Material</label>
+                <input name="mat" class="form-control">
+            </div>
+
+            <!-- RESPONSABLE (Combo) -->
+            <div class="col-md-4 mb-3">
+                <label>Responsable</label>
+                <select name="resp" class="form-select bg-black text-light">
+                    <option value="">-- Seleccionar --</option>
+                    {% if datos.responsables %}
+                        {% for item in datos.responsables %}
+                        <option value="{{ item }}">{{ item }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+
+            <!-- ESTADO (Combo) -->
+            <div class="col-md-4 mb-3">
+                <label>Estado</label>
+                <select name="estado" class="form-select bg-black text-light">
+                    <option value="">-- Seleccionar --</option>
+                    {% if datos.estados %}
+                        {% for est in datos.estados %}
+                        <option value="{{ est }}">{{ est }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Fecha</label>
+                <input type="date" name="fecha" class="form-control">
+            </div>
+
+            <!-- IMPRESORAS -->
+            <div class="col-md-4 mb-3">
+                <label>Impresora</label>
+                <select name="impresora" class="form-select bg-black text-light">
+                    <option value="">-- Seleccionar impresora --</option>
+                    {% for imp in impresoras %}
+                        <option value="{{ imp }}">{{ imp }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
         </div>
 
-        <div class="mb-3" id="campoArchivo" style="display: none;">
-          <label for="archivo" class="form-label">Nombre del archivo (.zpl)</label>
-          <input type="text" name="archivo" id="archivo" class="form-control">
-        </div>
+        <button name="vista_previa" class="btn btn-warning">Vista previa</button>
+        <button name="imprimir" class="btn btn-primary">Imprimir</button>
+    </form>
 
-        <div class="mb-3" id="campoCarpeta" style="display: none;">
-          <label for="carpeta" class="form-label">Nombre de la carpeta</label>
-          <input type="text" name="carpeta" id="carpeta" class="form-control" required>
-        </div>
+    <hr>
 
-        <button type="submit" class="btn btn-primary btn-lg w-100">Imprimir</button>
-      </form>
-    </div>
-  </div>
+    <a href="/editor_zpl" class="btn btn-info btn-sm mt-3">Editar ZPL</a>
+    <a href="/editor_json" class="btn btn-secondary btn-sm mt-3">Editar JSON</a>
+
 </div>
-
-<script>
-  function toggleCampos() {
-    const tipo = document.getElementById('tipo').value;
-    document.getElementById('campoArchivo').style.display = tipo === 'archivo' ? 'block' : 'none';
-    document.getElementById('campoCarpeta').style.display = tipo === 'carpeta' ? 'block' : 'none';
-  }
-</script>
-{% endblock %}
+</body>
+</html>
