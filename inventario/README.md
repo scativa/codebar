@@ -4,11 +4,13 @@ Está línea está adaptada a las etiquetas de inventario y continúa su línea 
 
 
 ## Files
+
+
 - `mod_zpl_template.py`: Librería para generar a partir de un template `.zpl`, usando la información almacenada diccionarios `type(dict)`. Provee herramientas para genera los diccionarios partiendo de _csv_, _json_ y ejemplos para tomar el desde _clipboard_.
 - `zpl_gen.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.csv` o del paste en memoria con los datos. El nombre del archivos está dado por la metadata `_idlote`
 - `cod_gen.py`: Genera el códigos para ser usados en por los inventario compuesto de dos letras mayúsculas y un número de dos dígitos. 
 
-- `./out`: Carpeta con archivos de salida, generalmente _zpl_. No se mantienen los cambios en _git_.
+- `./etiquetas`: Carpeta con archivos de salida, generalmente _zpl_. No se mantienen los cambios en _git_.
 - `./csv`: Carpeta con archivos _csv_ usados para el ingreso de datos
 - `./zpl`: Carpeta con archivos _zpl_, principalmente los templates
 

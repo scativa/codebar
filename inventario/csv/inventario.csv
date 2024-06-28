@@ -1,3 +1,5 @@
-_MBA,_KMP,_fis,_quimi,_idlote,_citems,_elem,_u,_isot,_pbruto,_ptara,_pneto,_uranio,_enriq,_pelem,_pisot,_codmat,_med,_obs
-RAY1,A,Residuo,UO2,Camp NC,1,E,g,G,,,,,,38,89,1,20,TQOE,M,KMP A
-RAY1,A,Residuo,UO2,Cort,1,E,g,G,,,,,,4,60,0,10,RRGD,M,KMP A
+_MBA,_KMP,_fis,_quimi,_idlote,_idloteviejo,_citem,_elem,_u,_isot,_pbruto,_ptara,_pneto,_uranio,_enriq,_pelem,_pisot,_codmat,_med,_obs,
+RAY1,A,Residuos,UO2,AA10,Camp NC,1,E,g,G,-,-,-,-,-,39,"1,21",TQOE,M,Sector mezcla de polvos,KMP A
+RAY1,A,Scrap,UO2,AA11,Cort,1,E,g,G,-,-,-,-,-,"4,6","0,1",RRGD,M,Laboratorio de densidad,KMP A
+RAY1,A,Pastillas,UO2,AA12,PES03,1,E,g,G,"16928,2","4027,27","12900,93","0,8814","3,1","11371,2","352,51",JQKB,M,Sector depósito de material nuclear,
+RAY1,A,Pastillas,UO2,AA13,PEV03,1,E,g,G,8460,"2915,2","5544,8","0,8565","3,1","4749,15","147,22",HQKB,M,Sector depósito de material nuclear,

@@ -1,6 +1,8 @@
 # Propias de programa
 out/
 inventario/out/
+inventario/produccion/etiquetas
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
