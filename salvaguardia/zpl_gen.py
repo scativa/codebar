@@ -1,9 +1,14 @@
 ################################
 ## Generador ZPL 
 ##
-## Genera archivos de etiquetas zpl partiendo de un archivo CSV
-## que puede ser leido de disco o de cortapapeles. La primer fila
-## debe contener los tags para reemplazar en el tamplate
+## Genera archivos de etiquetas zpl partiendo de información en formato CSV
+## que puede ser leido de un archivo en disco o de clipboard. 
+##
+## Estructura CSV
+## La primer fila debe contener los tags para reemplazar en el tamplate. Para
+## en las filas siguiente, cada columna representan el valor del tag a ser 
+## reemplazado en el template .zlp_t
+## 
 ##
 ## ARGS:
 ## - zpl_template: Archivo a usarse de modelo que se completa con
@@ -11,6 +16,7 @@
 ## 
 ## --csv: Archivo CSV de entrada. De ser NULL se toma lo existente
 ##        en el clipboard
+##
 ## --outdir: Carpeta de salida donde se graban los archivos de etiqueta generados
 ################################
 

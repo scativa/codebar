@@ -1,9 +1,10 @@
-# codebar
-Genera e imprime por linea de comandos etiquetas para las impresoras térmicas __Zebra GC420t__. Estas se generan a partir de un template `.zpl` que se completa con la información un archivo `.json` con los datos.
+ # codebar
+Genera e imprime por linea de comandos etiquetas para las impresoras térmicas __Zebra GC420t__. Estas se generan a partir de un template `.zpl` que se completa con la información en formato dict proveniente de un archivo `.json`, `.csv` o del portapapeles con los datos.
 
 ## Files
 - `mod_zpl_template.py`: Librería para generar a partir de un template `.zpl`, usando la información almacenada diccionarios `type(dict)`. Provee herramientas para genera los diccionarios partiendo de _csv_, _json_ y ejemplos para tomar el desde _clipboard_.
 - `json2label.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.json` con los datos.
+- `zpl_gen.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.csv` o del paste en memoria con los datos. Está especificado para el manejo de salvaguardia, ya que los nombres de archivo están dados por la metadata `_idlote`
 - `./csv`: Carpeta con código ejemplo de formato _csv_
 - `./json`: Carpeta con código ejemplo de manejo de archivos y formato _json_
 - `./zpl`: Carpeta con archivos y código ejemplo de manejo de formato _zpl_
@@ -18,7 +19,7 @@ python -m pip install -r requirements.txt
 sudo apt install xclip 
 ```
 
-## Usage
+## Uso
 ### Impresión de etiquetas
 Imprime en el dispositivo __zebra-raw__ en ubuntu. [ChatGPT](https://chat.openai.com/c/4736aef4-f2ee-4197-9721-cee293930aa6)
 
@@ -32,13 +33,6 @@ for file in *.zpl; do lp -d zebra-raw <<< "$(cat "$file")"; done
 ```
 
 Versión anterior que utiliza código python para generar un archivo zpl con la información a imprimir. Quedó en el branch `CodeGenVersion`. Está en la carpeta `cmdshell`
-__Obsoleto__
-```
-conda activate zebra
-python pastetable.py > temp_table.txt
-python table2label.py > temp_label.zpl
-lp -d zebra-raw <<< cat temp_label.zpl
-```
 
 ### ChatGPT
 [Zebra Print](https://chat.openai.com/c/64f4dc11-522e-4ad1-8f10-6e7b429ff514)
