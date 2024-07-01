@@ -2,6 +2,8 @@
 out/
 inventario/out/
 inventario/__pycache__/
+inventario/produccion/etiquetas
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
