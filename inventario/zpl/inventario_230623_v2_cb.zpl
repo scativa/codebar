@@ -1,0 +1,31 @@
+^XA
+^FO40,70^AM,60^FDPPCA^FS
+
+^FX Código QR
+^FO50,150^BQ,2,6^FDQA,_idlote^FS
+
+^FX Código de barras
+^BY2,3,100
+^FO50,310^BCN,55,N^FD_idlote^FS
+
+
+^FO50,390^AN,60^FD_idlote^FS
+^FO240,40^GB,400,2^FS
+^FO270,60^AM,24^FDPeso bruto (_u)^FS
+^FO270,110^AM,24^FDPeso tara (_u)^FS
+^FO270,160^AM,24^FDPeso neto (_u)^FS
+^FO270,210^AM,24^FDPeso elemento (_u)^FS
+^FO270,260^AM,24^FDPeso isotopo (_u)^FS
+^FO760,60,1^AN,30^FD_pbruto^FS
+^FO760,110,1^AN,30^FD_ptara^FS
+^FO760,160,1^AN,30^FD_pneto^FS
+^FO760,210,1^AN,30^FD_pelem^FS
+^FO760,260,1^AN,30^FD_pisot^FS
+^FO320,320^GB400,140,2^FS
+^FO335,415^AM,25^FD_citem Items^FS
+^FO355,350^AM,40^FD_codmat^FS
+^FO485,320^GB,137,2^FS
+^FO500,420^AN,22^FDEnriq. (%) = ^FS
+^FO650,418^AN,22^FD_enriq^FS
+^FO585,345^AM,65^FD_elem^FS
+^XZ
