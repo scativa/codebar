@@ -19,6 +19,9 @@ python -m pip install -r requirements.txt
 sudo apt install xclip 
 ```
 
+## GIT
+[Configuración proxy para CNEA](https://docs.google.com/document/d/1PBPeE-3_t7xeguKVyJ43NtW8PBHgLuLB9SqO0_dvmN0/edit#heading=h.bbutr3mgg8o5)
+
 ## Uso
 ### Impresión de etiquetas
 Imprime en el dispositivo __zebra-raw__ en ubuntu. [ChatGPT](https://chat.openai.com/c/4736aef4-f2ee-4197-9721-cee293930aa6)

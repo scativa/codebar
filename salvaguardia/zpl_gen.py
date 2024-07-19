@@ -50,7 +50,7 @@ csv_file_name = args.csv
 
 # file_names = args.files
 print(f'Modelo zpl: {zpl_file_name}')
-print(f'Modelo carpeta de salida: {out_dir}')
+print(f'Carpeta de salida: {out_dir}')
 print(f'Datos de entrada: {"Clipboard" if csv_file_name is None else csv_file_name}')
 
 if csv_file_name is None:

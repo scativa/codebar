@@ -1,7 +1,7 @@
 # Propias de programa
 out/
 salvaguardia/__pycache__/
-salvaguardia/etiquetas/
+salvaguardia/etiquetas*/
 
 
 # Byte-compiled / optimized / DLL files
