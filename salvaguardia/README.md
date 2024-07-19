@@ -6,6 +6,7 @@ Queda una branch por año fijo al momento de terminar y continúa su línea inde
 Dos scripts de shell  _*.sh_ para linux que permiten la generación de etiquetas y su posterior impresión.
 
 ### Scripts para producción
+[ChatGPT](https://chatgpt.com/c/5e331d27-bbba-4e2e-8413-ef946d1befe2)
 
 **Terminal Ubuntu**
 ```
