@@ -6,9 +6,22 @@ Queda una branch por año fijo al momento de terminar y continúa su línea inde
 Dos scripts de shell  _*.sh_ para linux que permiten la generación de etiquetas y su posterior impresión.
 
 ### Scripts para producción
+
+**Terminal Ubuntu**
 ```
 generar_etiquetas.sh
 ```
+
+**Terminal PowerShell Windows Anaconda**
+```
+generar_etiquetas.ps1
+```
+
+**Ejecutar desde Explorador de Windows** (llama al archivo ps1 con entorno conda)
+```
+generar_etiquetas.bat
+```
+
 Genera las etiquetas en la subcarpeta *./etiquetas* a partir de el porta papeles usando como template *inventario_230623_v2.zpl_t*. Si no existe la carpeta de destino la crear, si sí existe borra todos los archivos *.zpl* que contenga.
 Ejecuta`./codigos/cod_gen.py` con parámetros establecidos y comandos de consola linux.
 Requiere _conda_ con python el entorno _zebra_ (ver requirements.txt)
