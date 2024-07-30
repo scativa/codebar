@@ -3,7 +3,7 @@ Versión especifica para impresión de etiquetas de los controles anuales de inv
 Queda una branch por año fijo al momento de terminar y continúa su línea independiente de la rama principal.
 
 ## Uso
-Dos scripts de shell  _*.sh_ para linux que permiten la generación de etiquetas y su posterior impresión.
+Scripts bash _.sh_ para linux que permiten la generación de etiquetas y su posterior impresión. También los scripts de PowerShell (_.ps1_ y _.bat_)de Win10 sólo para la generación de etiquetas.
 
 ### Scripts para producción
 [ChatGPT](https://chatgpt.com/c/5e331d27-bbba-4e2e-8413-ef946d1befe2)
@@ -28,9 +28,10 @@ Ejecuta`./codigos/cod_gen.py` con parámetros establecidos y comandos de consola
 Requiere _conda_ con python el entorno _zebra_ (ver requirements.txt)
 
 ```
-imprimir_etiquetas.sh
+imprimir_menu.sh
 ```
-Imprime en *zebra-raw* las etiquetas _*.zpl_ de la subcarpeta *./etiquetas*. No utiliza código python.
+Permite seleccionar de las subcarpetas con el patron "etiquetas_*" las etiquetas a imprimir previamente generadas. Da como opción para una subcarpeta imprimir **todas** o **una en particular** 
+Utiliza la impresora *zebra-raw*. No utiliza python ni precisa de entorno conda.
 
 ### Linea de comandos
 #### Generación de etiquetas
@@ -65,12 +66,6 @@ Versión anterior que utiliza código python para generar un archivo zpl con la 
 - `mod_zpl_template.py`: Copia de existente en la raiz del proyecto.
 - `zpl_gen.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.csv` o del paste en memoria con los datos. El nombre del archivos está dado por la metadata `_idlote`
 - `./codigos/cod_gen.py`: Genera el códigos para ser usados en por los inventario compuesto de dos letras mayúsculas y un número de dos dígitos. 
-
-__Carpetas__
-- `./producción`: Estructura y archivos para .
-- `./etiquetas`: Carpeta con archivos de salida, generalmente _zpl_. No se mantienen los cambios en _git_.
-- `./csv`: Carpeta con archivos _csv_ usados para el ingreso de datos
-- `./zpl`: Carpeta con archivos _zpl_, principalmente los templates
 
 ## Configuración
 ver _README.md_ del proyecto
