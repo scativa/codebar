@@ -67,6 +67,9 @@ Versión anterior que utiliza código python para generar un archivo zpl con la 
 - `zpl_gen.py`: Genera el código en formato _zpl_ de etiquetas a partir de un template `.zpl` y la información un archivo `.csv` o del paste en memoria con los datos. El nombre del archivos está dado por la metadata `_idlote`. Tiene la opción de generar al momento un archivo `.json` por etiqueta con el mismo nombre.
 - `./codigos/cod_gen.py`: Genera el códigos para ser usados en por los inventario compuesto de dos letras mayúsculas y un número de dos dígitos. 
 
+## scripts (Linux y win)
+[ChatGPT](https://chatgpt.com/c/5e331d27-bbba-4e2e-8413-ef946d1befe2)
+
 ## Configuración
 ver _README.md_ del proyecto
 

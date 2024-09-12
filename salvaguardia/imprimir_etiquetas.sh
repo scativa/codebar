@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://chatgpt.com/c/5e331d27-bbba-4e2e-8413-ef946d1befe2
 
 # Verificar si se ha pasado un parámetro
 if [ $# -eq 0 ]; then

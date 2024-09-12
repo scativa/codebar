@@ -1,3 +1,5 @@
+# https://chatgpt.com/c/5e331d27-bbba-4e2e-8413-ef946d1befe2
+
 # Obtener todas las subcarpetas que coinciden con el formato "etiquetas_????"
 $subcarpetas = Get-ChildItem -Directory -Filter "etiquetas_????"
 
