@@ -2,6 +2,7 @@
 out/
 salvaguardia/__pycache__/
 salvaguardia/etiquetas*/
+web/etiquetas/*
 
 
 # Byte-compiled / optimized / DLL files
