@@ -55,7 +55,10 @@ def imprimir_carpeta_zpl(carpeta, impresora):
 @app.route('/')
 def index():
     impresoras = obtener_impresoras()  # Obtiene las impresoras filtradas
-    return render_template('index.html', impresoras=impresoras)
+    # TODO: el template index.html tiene links a /editor_zpl y /editor_json
+    # que no están implementados en esta app. Revisar con el desarrollador
+    # si deben agregarse o sacarse los links del template.
+    return render_template('index.html', impresoras=impresoras, datos={})
 
 # Enviar etiquetas a la impresora
 @app.route('/imprimir', methods=['POST'])

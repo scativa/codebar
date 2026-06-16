@@ -6,6 +6,9 @@ web/etiquetas/*
 web/zpl_guardados
 web/zpl_guardados/*
 
+# SDD infrastructure
+.atl/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 /*/__pycache__/

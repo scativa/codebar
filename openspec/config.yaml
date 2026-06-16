@@ -1,0 +1,31 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: Python 3.10.14, Flask (web subdir), pyperclip
+  Architecture: Scripts-based CLI tool for ZPL label generation. ZPL templates + CSV/JSON/clipboard data → replaced tags → ZPL output. Also Flask web app for GUI label generation with win32print support.
+  Testing: None detected (no pytest, unittest dirs, or test files)
+  Style: No linter/formatter detected. Spanish comments, English code identifiers.
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Identify affected modules/packages
+  specs:
+    - Use Given/When/Then format for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group tasks by phase (infrastructure, implementation, testing)
+    - Use hierarchical numbering (1.1, 1.2, etc.)
+    - Keep tasks small enough to complete in one session
+  apply:
+    - Follow existing code patterns and conventions (.py scripts, Spanish comments)
+    - No test framework required unless adding one
+  verify:
+    - Manual verification: run script with sample data and inspect ZPL output
+    - No automated test infrastructure available yet
+  archive:
+    - Warn before merging destructive deltas (large removals)
