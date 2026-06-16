@@ -3,7 +3,8 @@ out/
 salvaguardia/__pycache__/
 salvaguardia/etiquetas*/
 web/etiquetas/*
-
+web/zpl_guardados
+web/zpl_guardados/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
